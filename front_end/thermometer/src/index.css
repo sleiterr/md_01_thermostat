@@ -4,6 +4,9 @@
 
 @theme {
   --bg-section: linear-gradient(180deg, #372768 0%, #443185 100%);
+  --bg-card: linear-gradient(180deg,
+      rgba(42, 31, 79, 0.9) 0%,
+      rgba(36, 26, 69, 0.9) 100%);
 
   --color-primary: #fff;
   --color-secondary: #fff;
@@ -15,6 +18,11 @@
   .bg-section {
     background: var(--bg-section);
   }
+
+  .bg-card {
+    background: var(--bg-card);
+  }
+
 }
 
 :root {
