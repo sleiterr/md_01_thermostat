@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
-import { fetchTemperature } from "../utils/api.js";
+import Section from "../Section/Section.jsx";
+
+import { fetchTemperature } from "../../utils/api.js";
 
 const Temperature = () => {
   const [temp, setTemp] = useState(null);
@@ -28,14 +30,18 @@ const Temperature = () => {
   }, []);
 
   return (
-    <>
-      <h1>ESP32 Thermometer</h1>
-      {error ? (
-        <p style={{ color: "red" }}>{error}</p>
-      ) : (
-        <p>{temp !== null ? temp.toFixed(1) : "__"} °C</p>
-      )}
-    </>
+    <Section>
+      <div className="grid h-full w-full place-items-center text-center">
+        <h1>ESP32 Thermometer</h1>
+        {error ? (
+          <p style={{ color: "red" }}>{error}</p>
+        ) : (
+          <p className="font-semibold text-2xl text bg-red-400">
+            {temp !== null ? temp.toFixed(1) : "__"} °C
+          </p>
+        )}
+      </div>
+    </Section>
   );
 };
 
