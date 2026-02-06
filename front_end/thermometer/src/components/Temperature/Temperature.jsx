@@ -47,11 +47,6 @@ const Temperature = () => {
       <div className="relative overflow-hidden  flex flex-col items-center justify-center h-190 w-140 bg-card p-8 shadow-lg border rounded-xl border-white/10">
         <CardBackground />
         <Term />
-        {/* <div className="absolute top-20 left-4 z-10 items-self-center mb-6">
-          <h1 className="mx-auto max-w-45 text-center text-2xl font-normal leading-tight text-primary tracking-wide">
-            Thermometer <span className="font-extralight">ESP32</span>
-          </h1>
-        </div> */}
         <div className="flex items-end space-x-4">
           <BiHomeAlt2 size={48} className="text-yellow-400" />
           {error ? (
